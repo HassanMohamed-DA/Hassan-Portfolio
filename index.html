@@ -27,7 +27,7 @@
       align-items: center;
     }
     nav a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   margin-left: 20px;
   position: relative;
@@ -118,19 +118,22 @@
       box-shadow: 0 0 20px rgba(255, 64, 129, 0.3);
     }
     .project h3 a {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 20px;
-      background: #1e1e1e;
-      border: 1px solid #333;
-      border-radius: 6px;
-      color: #ff4081;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s;
-      position: relative;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 20px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #ff4081;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  position: relative;
+  text-align: center;
+}
     .project h3 a img {
       height: 20px;
       margin-bottom: -3px;
@@ -183,19 +186,22 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ duration: 1500, once: true });</script>
 
-  <div style="position: absolute; top: 10px; left: 20px; font-size: 18px; color: #ff4081; font-weight: bold;">Welcome to my portfolio!</div>
-<nav>
-  <a href="#about">About</a>
-  <span style="color:#666;margin: 0 10px;">|</span>
-  <a href="#projects">Projects</a>
-  <span style="color:#666;margin: 0 10px;">|</span>
-  <a href="#certifications">Certifications</a>
-  <span style="color:#666;margin: 0 10px;">|</span>
-  <a href="#contact">Contact</a>
-</nav>
+  <div style="display: flex; flex-direction: column; gap: 10px; background: #1e1e1e; padding: 1rem 2rem; text-align: center;">
+  <div style="font-size: 18px; color: #ff4081; font-weight: bold; text-align: center;">Welcome to my portfolio!</div>
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; align-items: center; gap: 10px;">
+    <a href="#about" style="color: white; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='#ff4081'" onmouseout="this.style.color='white'">About</a>
+    <span style="color:#666;">|</span>
+    <a href="#projects" style="color: white; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='#ff4081'" onmouseout="this.style.color='white'">Projects</a>
+    <span style="color:#666;">|</span>
+    <a href="#certifications" style="color: white; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='#ff4081'" onmouseout="this.style.color='white'">Certifications</a>
+    <span style="color:#666;">|</span>
+    <a href="#contact" style="color: white; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='#ff4081'" onmouseout="this.style.color='white'">Contact</a>
+  </div>
+</div>
 
-  <section class="hero" data-aos="fade-up">
-    <img src="https://avatars.githubusercontent.com/u/205528592?v=4" alt="Hassan Mohamed's Profile Picture">
+  <section class="hero" data-aos="fade-up" style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left;">
+  <img src="https://avatars.githubusercontent.com/u/205528592?v=4" alt="Hassan Mohamed">
+  <div style="max-width: 400px;">
     <h1>Hassan Mohamed</h1>
     <h2>Data Analyst | Excel • SQL • Power BI<br><span style="font-size: 14px; color: #aaa;">Translating Data into Decisions.</span></h2>
     <div>
@@ -203,7 +209,8 @@
       <a href="https://github.com/HassanMohamed-DA" target="_blank" data-tooltip="Check out my GitHub"><i class="fab fa-github"></i></a>
       <a href="mailto:hassan.a.mohamed41@gmail.com" data-tooltip="Email me"><i class="fas fa-envelope"></i></a>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
@@ -260,6 +267,10 @@
     <p>📧 Email: <a href="mailto:hassan.a.mohamed41@gmail.com">hassan.a.mohamed41@gmail.com</a></p>
     <p>📞 Phone: <span style="color: #ff4081;">+20 111 507 8675</span></p>
   </footer>
+
+</body>
+</html>
+
 
 </body>
 </html>
