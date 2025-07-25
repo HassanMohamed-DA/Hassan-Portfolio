@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hassan Mohamed's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -27,17 +27,18 @@
       align-items: center;
     }
     nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  position: relative;
-  display: inline-block;
-  transition: all 0.3s;
-}
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      position: relative;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+    }
     nav a:hover {
-  color: #ff4081;
-  transform: scale(1.1);
-}
+      color: #ff4081;
+      transform: scale(1.1);
+      text-shadow: 0 0 5px #ff4081;
+    }
     .hero {
       display: flex;
       flex-direction: column;
@@ -96,11 +97,13 @@
       opacity: 1;
     }
     section {
-  scroll-margin-top: 100px;}
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
     h2 {
       text-align: center;
       font-size: 28px;
-      margin-top: 100px;
       margin-bottom: 40px;
       color: white;
     }
@@ -109,29 +112,22 @@
       margin-bottom: 40px;
       padding: 20px;
       border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(255, 64, 129, 0.3);
+      text-align: center;
     }
     .project h3 a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px 20px;
-  background: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 6px;
-  color: #ff4081;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s;
-  position: relative;
-  text-align: center;
-}
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #ff4081;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      justify-content: center;
+    }
     .project h3 a img {
       height: 20px;
       margin-bottom: -3px;
@@ -139,20 +135,6 @@
     .project h3 a:hover {
       background: #333;
       transform: scale(1.05);
-    }
-    .project h3 a:hover::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #333;
-      color: #fff;
-      padding: 5px 10px;
-      font-size: 12px;
-      border-radius: 5px;
-      white-space: nowrap;
-      opacity: 0.9;
     }
     .project img:not(.project h3 a img) {
       max-width: 100%;
@@ -162,6 +144,7 @@
     .project p {
       margin: 10px 0;
       line-height: 1.6;
+      text-align: center;
     }
     footer {
       text-align: center;
@@ -171,44 +154,47 @@
       margin-top: 40px;
     }
     footer a {
-  color: #ff4081;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-  
+      color: #ff4081;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
 
-
-</style>
+    footer a:hover {
+      color: white;
+      transform: scale(1.05);
+      text-shadow: 0 0 8px #ff4081;
+    }
+  </style>
 </head>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ duration: 1500, once: true });</script>
 
   <div style="display: flex; flex-direction: column; gap: 10px; background: #1e1e1e; padding: 1rem 2rem; text-align: center;">
-  <div style="font-size: 18px; color: #ff4081; font-weight: bold; text-align: center;">Welcome to my portfolio!</div>
-  <div style="display: flex; justify-content: center; flex-wrap: wrap; align-items: center; gap: 10px;">
-    <a href="#about" style="color: white; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='#ff4081'" onmouseout="this.style.color='white'">About</a>
-    <span style="color:#666;">|</span>
-    <a href="#projects" style="color: white; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='#ff4081'" onmouseout="this.style.color='white'">Projects</a>
-    <span style="color:#666;">|</span>
-    <a href="#certifications" style="color: white; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='#ff4081'" onmouseout="this.style.color='white'">Certifications</a>
-    <span style="color:#666;">|</span>
-    <a href="#contact" style="color: white; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.color='#ff4081'" onmouseout="this.style.color='white'">Contact</a>
-  </div>
-</div>
-
-  <section class="hero" data-aos="fade-up" style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left;">
-  <img src="https://avatars.githubusercontent.com/u/205528592?v=4" alt="Hassan Mohamed">
-  <div style="max-width: 400px;">
-    <h1>Hassan Mohamed</h1>
-    <h2>Data Analyst | Excel • SQL • Power BI<br><span style="font-size: 14px; color: #aaa;">Translating Data into Decisions.</span></h2>
-    <div>
-      <a href="https://www.linkedin.com/in/hassan-mohamed-DA/" target="_blank" data-tooltip="Visit my LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/HassanMohamed-DA" target="_blank" data-tooltip="Check out my GitHub"><i class="fab fa-github"></i></a>
-      <a href="mailto:hassan.a.mohamed41@gmail.com" data-tooltip="Email me"><i class="fas fa-envelope"></i></a>
+    <div style="font-size: 18px; color: #ff4081; font-weight: bold; text-align: center;">Welcome to my portfolio!</div>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; align-items: center; gap: 10px;">
+      <a href="#about" style="color: white; text-decoration: none; position: relative; padding: 8px 14px; border-radius: 6px; transition: all 0.4s ease;" onmouseover="this.style.backgroundColor='#ff4081'; this.style.color='white'; this.style.transform='scale(1.1) rotate(-1deg)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'; this.style.transform='scale(1) rotate(0)'">About</a>
+      <span style="color:#666;">|</span>
+      <a href="#projects" style="color: white; text-decoration: none; position: relative; padding: 8px 14px; border-radius: 6px; transition: all 0.4s ease;" onmouseover="this.style.backgroundColor='#ff4081'; this.style.color='white'; this.style.transform='scale(1.1) rotate(-1deg)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'; this.style.transform='scale(1) rotate(0)'">Projects</a>
+      <span style="color:#666;">|</span>
+      <a href="#certifications" style="color: white; text-decoration: none; position: relative; padding: 8px 14px; border-radius: 6px; transition: all 0.4s ease;" onmouseover="this.style.backgroundColor='#ff4081'; this.style.color='white'; this.style.transform='scale(1.1) rotate(-1deg)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'; this.style.transform='scale(1) rotate(0)'">Certifications</a>
+      <span style="color:#666;">|</span>
+      <a href="#contact" style="color: white; text-decoration: none; position: relative; padding: 8px 14px; border-radius: 6px; transition: all 0.4s ease;" onmouseover="this.style.backgroundColor='#ff4081'; this.style.color='white'; this.style.transform='scale(1.1) rotate(-1deg)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'; this.style.transform='scale(1) rotate(0)'">Contact</a>
     </div>
   </div>
-</section>
+
+  <section class="hero" data-aos="fade-up" style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left;">
+    <img src="https://avatars.githubusercontent.com/u/205528592?v=4" alt="Hassan Mohamed">
+    <div style="max-width: 400px;">
+      <h1>Hassan Mohamed</h1>
+      <h2>Data Analyst | Excel • SQL • Power BI<br><span style="font-size: 14px; color: #aaa;">Translating Data into Decisions.</span></h2>
+      <div>
+        <a href="https://www.linkedin.com/in/hassan-mohamed-DA/" target="_blank" data-tooltip="Visit my LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/HassanMohamed-DA" target="_blank" data-tooltip="Check out my GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:hassan.a.mohamed41@gmail.com" data-tooltip="Email me"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
 
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
@@ -220,32 +206,33 @@
     </div>
   </section>
 
+  <!-- ✅ UPDATED PROJECTS SECTION -->
   <section id="projects" data-aos="fade-up">
-  <h2>Projects</h2>
+    <h2>Projects</h2>
 
-  <div class="project">
-    <h3><a href="https://github.com/HassanMohamed-DA/SQL-Data-Analyst-Roles" target="_blank" data-tooltip="View SQL Project">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Icon"> SQL_Data_Analyst_Roles</a></h3>
-    <p>In-depth SQL analysis of Data Analyst Roles using job listings. Explores top-paying companies, in-demand skills, and where strong hiring trends align with strong compensation.</p>
-  </div>
+    <div class="project">
+      <h3><a href="https://github.com/HassanMohamed-DA/SQL-Data-Analyst-Roles" target="_blank" data-tooltip="View SQL Project">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL Icon"> SQL_Data_Analyst_Roles</a></h3>
+      <p>In-depth SQL analysis of Data Analyst Roles using job listings. Explores top-paying companies, in-demand skills, and where strong hiring trends align with strong compensation.</p>
+    </div>
 
-  <div class="project">
-    <h3><a href="https://github.com/HassanMohamed-DA/Excel_Project_Data_Jobs_Analysis" target="_blank" data-tooltip="View Excel Project">
-      <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel Icon"> Excel_Project_Data_Jobs_Analysis</a></h3>
-    <p>A two-part Excel project featuring an interactive dashboard and deep analysis of salary trends.</p>
-    <p>1. <strong>An interactive Excel dashboard</strong> to explore salary trends by role, level, country, and job type.</p>
-    <img src="https://pfst.cf2.poecdn.net/base/image/b34ff33173dcbed7eb156e7392c0b9d38c898e311d1ddd9ede915ba4419b899f" alt="Excel Dashboard">
-    <p>2. <strong>Deep analysis using advanced Excel techniques</strong> to uncover how technical skills influence salaries in data roles.</p>
-    <img src="https://pfst.cf2.poecdn.net/base/image/8e7fcf30ff14e87947345f5c2735f79bd6e0619e7afc4c0f1f0492070b2915d1" alt="Excel Analysis">
-  </div>
+    <div class="project">
+      <h3><a href="https://github.com/HassanMohamed-DA/Excel_Project_Data_Jobs_Analysis" target="_blank" data-tooltip="View Excel Project">
+        <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel Icon"> Excel_Project_Data_Jobs_Analysis</a></h3>
+      <p>A two-part Excel project featuring an interactive dashboard and deep analysis of salary trends.</p>
+      <p>1. <strong>An interactive Excel dashboard</strong> to explore salary trends by role, level, country, and job type.</p>
+      <img src="https://pfst.cf2.poecdn.net/base/image/b34ff33173dcbed7eb156e7392c0b9d38c898e311d1ddd9ede915ba4419b899f" alt="Excel Dashboard">
+      <p>2. <strong>Deep analysis using advanced Excel techniques</strong> to uncover how technical skills influence salaries in data roles.</p>
+      <img src="https://pfst.cf2.poecdn.net/base/image/8e7fcf30ff14e87947345f5c2735f79bd6e0619e7afc4c0f1f0492070b2915d1" alt="Excel Analysis">
+    </div>
 
-  <div class="project">
-    <h3><a href="https://github.com/HassanMohamed-DA/PowerBI_Data_Job_Market" target="_blank" data-tooltip="View Power BI Project">
-      <img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI Icon"> PowerBI_Data_Job_Market</a></h3>
-    <p>An interactive Power BI dashboard that explores real-world data job listings—showing job counts, salaries, trends, and role comparisons. Helps users spot high-demand roles, compare pay, and track market shifts. Also highlights my ability to build clear, user-friendly dashboards with Power BI.</p>
-    <img src="https://github.com/user-attachments/assets/9fc017a2-3c42-4930-9f5d-4dc0dbebd8f8" alt="Power BI Dashboard">
-  </div>
-</section>
+    <div class="project">
+      <h3><a href="https://github.com/HassanMohamed-DA/PowerBI_Data_Job_Market" target="_blank" data-tooltip="View Power BI Project">
+        <img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI Icon"> PowerBI_Data_Job_Market</a></h3>
+      <p>An interactive Power BI dashboard that explores real-world data job listings—showing job counts, salaries, trends, and role comparisons. Helps users spot high-demand roles, compare pay, and track market shifts.</p>
+      <img src="https://github.com/user-attachments/assets/9fc017a2-3c42-4930-9f5d-4dc0dbebd8f8" alt="Power BI Dashboard">
+    </div>
+  </section>
 
   <section id="certifications" data-aos="fade-up">
     <h2>Certifications</h2>
@@ -255,7 +242,7 @@
       <p>Developed skills in data cleaning, querying, visualization, and storytelling through practical, hands-on projects and team collaboration.</p>
       <img src="https://savanna.alxafrica.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNFZ5SUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f1b785974d5f3ad78abb4f0a6d2ee14eefb5f8c0/51-data-analytics-certificate-hassan-mohamed.png" alt="ALX Certificate">
       <br>
-      <a href="https://savanna.alxafrica.com/certificates/Z37PmH9n6N" style="color: #ff4081; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">Show Credential</a>
+      <a href="https://savanna.alxafrica.com/certificates/Z37PmH9n6N" style="color: #ff4081; text-decoration: none; padding: 8px 14px; border-radius: 6px; transition: all 0.4s ease; display: inline-block;" onmouseover="this.style.backgroundColor='#ff4081'; this.style.color='white'; this.style.transform='scale(1.1) rotate(-1deg)'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ff4081'; this.style.transform='scale(1) rotate(0)'">Show Credential</a>
     </div>
   </section>
 
@@ -267,15 +254,33 @@
   </footer>
 
 <script>
+  // Smooth scroll + entrance animation on section reveal
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.classList.add('highlight-section');
+        setTimeout(() => target.classList.remove('highlight-section'), 1200);
       }
     });
   });
 </script>
+<style>
+  .highlight-section {
+    animation: sectionFadeIn 1s ease;
+  }
+  @keyframes sectionFadeIn {
+    from {
+      opacity: 0.3;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 </body>
 </html>
